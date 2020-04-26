@@ -7,16 +7,20 @@ import ErrorBoundary from "./containers/errors/errorboundary";
 import variables from "./ui/constants/variables";
 import {ConstantProvider} from "./ui/constants/context";
 import SiteStylingProvider from "./ui/constants/theme";
+import {Provider} from "react-redux";
+import store from './store'
 
 
 ReactDOM.render(
     <React.StrictMode>
         <ErrorBoundary>
-            <ConstantProvider value={variables}>
-                <SiteStylingProvider>
-                    <App/>
-                </SiteStylingProvider>
-            </ConstantProvider>
+            <Provider store={store}>
+                <ConstantProvider value={variables}>
+                    <SiteStylingProvider>
+                        <App/>
+                    </SiteStylingProvider>
+                </ConstantProvider>
+            </Provider>
         </ErrorBoundary>
     </React.StrictMode>,
     document.getElementById('root')
