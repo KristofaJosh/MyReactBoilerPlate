@@ -1,11 +1,9 @@
 import theme from 'styled-theming';
 
-export const backgroundColor = theme ('mode', {
-    day: "white",
-    night: "black",
+export const backgroundColor = theme.variants('mode', 'variant', {
+    primary: {day: "white", night: "black"},
 });
 
-export const textColor = theme ('mode', {
-    day: "black",
-    night: "white",
+export const textColor = theme.variants('mode', 'variant', {
+    primary: {day: "black", night: "white"},
 });

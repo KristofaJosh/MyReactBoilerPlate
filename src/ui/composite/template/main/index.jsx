@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {backgroundColor, textColor} from "../../../constants/theme/styles";
 
-const AuthTemplate = ({children}) => {
+const MainTemplate = ({children}) => {
     return <Styling variant={'primary'}>
         {children}
     </Styling>
@@ -14,4 +14,4 @@ color: ${textColor};
 background-color: ${backgroundColor};
 `;
 
-export default AuthTemplate;
+export default MainTemplate;

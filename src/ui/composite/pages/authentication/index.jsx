@@ -1,9 +1,12 @@
 import React from "react";
+import AuthTemplate from "../../template/authentication";
 
-const Authentication = () => {
+const AuthPage = () => {
     return <>
-        <p>Login or SignUp</p>
+        <AuthTemplate>
+            <p>Login or SignUp</p>
+        </AuthTemplate>
     </>
 };
 
-export default Authentication;
+export default AuthPage;
