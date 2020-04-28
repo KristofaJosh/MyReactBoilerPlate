@@ -8,13 +8,13 @@ const AuthPage = lazy(() => import("../ui/composite/pages/authentication"));
 const HomePage = lazy(() => import("../ui/composite/pages/home"));
 
 
-
 function AppRoutes() {
     
     return (
         <>
-            <Suspense fallback={'loading...'}>
-                
+            <Suspense fallback={
+                'loading...'
+            }>
                 <Router>
                     <Switch>
                         <Route exact path="/" component={HomePage}/>

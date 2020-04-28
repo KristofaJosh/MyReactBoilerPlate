@@ -16,7 +16,8 @@ const HomePage = () => {
             <div style={{color: black}}>
                 Context
             </div>
-            <Link to={'/auth'}> Goto Auth Page </Link><br/>
+            <Link to={'/auth'}>Goto Auth Page</Link>
+            <br/>
             <button style={{backgroundColor: brown}} onClick={changeStyle.changeMode}>Change Theme Mode</button>
         </MainTemplate>
     </>

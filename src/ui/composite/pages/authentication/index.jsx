@@ -6,7 +6,7 @@ const AuthPage = () => {
     return <>
         <AuthTemplate>
             <p>Auth Page</p>
-            <Link to={'/'}> Goto Home Page </Link>
+            <Link to={'/'}>Goto Home Page</Link>
         </AuthTemplate>
     </>
 };
