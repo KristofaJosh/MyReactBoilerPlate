@@ -13,8 +13,11 @@ const HomePage = () => {
     return <>
         <MainTemplate variant={'primary'}>
             <h1>Welcome</h1>
-            <div style={{color: black}}> Constant variables </div>
-            <Link to={'/auth'}> Login/SigUp </Link>
+            <div style={{color: black}}>
+                Context
+            </div>
+            <Link to={'/auth'}>Goto Auth Page</Link>
+            <br/>
             <button style={{backgroundColor: brown}} onClick={changeStyle.changeMode}>Change Theme Mode</button>
         </MainTemplate>
     </>
