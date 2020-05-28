@@ -1,6 +1,12 @@
-import {createStore} from "redux";
+import { createStore } from "redux";
 import allReducers from "./reducers";
 
-const store = createStore(allReducers);
+let isDev =
+  process.env.NODE_ENV === "development"
+    ? window.__REDUX_DEVTOOLS_EXTENSION__ &&
+      window.__REDUX_DEVTOOLS_EXTENSION__()
+    : undefined;
 
-export default store
+const store = createStore(allReducers, isDev);
+
+export default store;
