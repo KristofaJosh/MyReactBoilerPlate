@@ -9,17 +9,25 @@ import {ConstantProvider} from "./ui/constants/context";
 import SiteStylingProvider from "./ui/constants/theme";
 import {Provider} from "react-redux";
 import store from './store'
+import ApolloClient from 'apollo-boost';
+import {ApolloProvider} from '@apollo/react-hooks'
 
+
+const client = new ApolloClient({
+    uri: 'https://48p1r2roz4.sse.codesandbox.io',
+});
 
 ReactDOM.render(
     <React.StrictMode>
         <ErrorBoundary>
             <Provider store={store}>
-                <ConstantProvider value={variables}>
-                    <SiteStylingProvider>
-                        <App/>
-                    </SiteStylingProvider>
-                </ConstantProvider>
+                <ApolloProvider client={client}>
+                    <ConstantProvider value={variables}>
+                        <SiteStylingProvider>
+                            <App/>
+                        </SiteStylingProvider>
+                    </ConstantProvider>
+                </ApolloProvider>
             </Provider>
         </ErrorBoundary>
     </React.StrictMode>,
