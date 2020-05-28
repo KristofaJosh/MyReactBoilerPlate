@@ -2,8 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ### Usage
-- For simple projects, clone master, more complex ? pull other branches with the feature you want
+- For simple projects, clone withDefault, more complex ? pull other branches with the feature you want
   - eg: if you want grapql for your project, pull branch "withGraphQl"
-- if you have **master** branch cloned already, then you can pull other branches with the feature you want and merge to your repo
+- pulling **master** contains every feature available
 
 #### That simple
