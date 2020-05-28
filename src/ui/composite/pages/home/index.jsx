@@ -26,6 +26,7 @@ const HomePage = () => {
           <li>Styled Components</li>
           <li>Styled Theming</li>
           <li>Redux with react dev tools in development only</li>
+          <li>GraphQL</li>
 
           <p>
             <a href="https://github.com/KristofaJosh/MyReactBoilerPlate.git">
@@ -38,15 +39,14 @@ const HomePage = () => {
 
           <div style={{ marginTop: "4rem" }}>
             <div style={{ color: siteColors.black }}>
-              {" "}
-              <strong>Constant color black</strong>{" "}
+              <strong>Constant color black</strong>
             </div>
             <div style={{ color: siteColors.brown }}>
-              {" "}
-              <strong>Constant color brown</strong>{" "}
+              <strong>Constant color brown</strong>
             </div>
             <br />
-            <Link to={"/auth"}> Login/SigUp </Link>
+            <Link to={"/auth"}> Auth Route </Link>
+            <Link to={"/apollo"}> GraphQl Example </Link>
             <br />
             <button
               style={{ backgroundColor: backgroundColor }}
