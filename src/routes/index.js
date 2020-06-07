@@ -1,11 +1,11 @@
-import React, {lazy, Suspense} from "react";
-import {useSelector} from "react-redux";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import React, { lazy, Suspense } from "react";
+import { useSelector } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import NotFound from "../ui/composite/pages/errorpages/404";
 import PrivatePage from "../ui/composite/pages/private";
 
-import {PrivateRoute, PublicRoute} from "./router_helpers/router";
+import { PrivateRoute, PublicRoute } from "./router_helpers/router";
 
 // noinspection JSCheckFunctionSignatures
 const AuthPage = lazy(() => import("../ui/composite/pages/authentication"));
@@ -13,27 +13,33 @@ const AuthPage = lazy(() => import("../ui/composite/pages/authentication"));
 const HomePage = lazy(() => import("../ui/composite/pages/home"));
 
 function AppRoutes() {
-  const isAuthenticated = useSelector(state => state.authenticationReducer);
+  const isAuthenticated = useSelector((state) => state.authenticationReducer);
 
   return (
-      <><Suspense fallback = {'loading...'}>
-
-      <Router><Switch>
-      <PrivateRoute path = "/private" component = {PrivatePage} authenticated =
-           {isAuthenticated} notAuth =
-       {
-         '/auth/private'
-       } />
-                        <PublicRoute path="/auth
-         " component={AuthPage} authenticated={isAuthenticated} onAuth={'/'}/>
-       < Route exact path = "/" component =
-       {
-         HomePage
-       } />
-                        <Route path="*" component={NotFound}/>
-      </Switch>
-                </Router></Suspense>
-        </>);
+    <>
+      <Suspense fallback={"loading..."}>
+        <Router>
+          <Switch>
+            <PrivateRoute
+              path="/private"
+              component={PrivatePage}
+              authenticated={isAuthenticated}
+              notAuth={"/auth/private"}
+            />
+            <PublicRoute
+              path="/auth
+         "
+              component={AuthPage}
+              authenticated={isAuthenticated}
+              onAuth={"/"}
+            />
+            <Route exact path="/" component={HomePage} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </Router>
+      </Suspense>
+    </>
+  );
 }
 
 export default AppRoutes;
