@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import MainTemplate from "../../template/main";
 import {StyleContext} from "../../../constants/context";
 import {Link} from "react-router-dom";
@@ -43,6 +43,7 @@ const HomePage = () => {
                 <div style={{marginTop: '4rem'}}>
                     <div style={{color: siteColors.black}}><strong>Constant color black</strong></div>
                     <div style={{color: siteColors.brown}}><strong>Constant color brown</strong></div>
+                    <Link to={"/apollo"}> GraphQl Example </Link>
                     <br/>
                     <Link to={'/auth'}> Authentication Page </Link>
                     <br/>
@@ -59,10 +60,11 @@ const HomePage = () => {
                             )
                             : null
                     }
-                </div>
-            </div>
-        </MainTemplate>
+                </div>   
+        </div>
+      </MainTemplate>
     </>
+  );
 };
 
 export default HomePage;
