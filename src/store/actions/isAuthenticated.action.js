@@ -1,3 +1,3 @@
 export const isAuthenticated = () => {
-  return { type: "AUTHENTICATE" }
+  return { type: "AUTHENTICATE" };
 };
