@@ -12,6 +12,8 @@ const Styling = styled.div`
 width: 100%;
 color: ${textColor};
 background-color: ${backgroundColor};
+padding: 2rem;
+height: 100%;
 `;
 
 export default AuthTemplate;
